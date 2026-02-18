@@ -76,32 +76,6 @@
 				</div>
 			</section>
 		</main>
-		
-		
-	
-		<script>
-			const toggle = document.getElementById("menu-toggle");
-			const nav = document.getElementById("nav");
-
-			toggle.addEventListener("click", () => {
-			nav.classList.toggle("active");
-			});
-		</script>
-		
-		<script>
-	const letters = document.querySelectorAll('.figure');
-	let index = 0;
-
-	const interval = setInterval(() => {
-		if (index < letters.length) {
-			letters[index].classList.add('show');
-			index++;
-		} else {
-			clearInterval(interval);
-		}
-			}, 100); // 1 seconde = 1000 ms
-</script>
-
 <footer class="footer">
 			<div class="classe">
 				<div class="page"> 
@@ -171,5 +145,6 @@
 				<p 
 				   class="copy">&copy.2026 LaPageEdu | Tous droits réservés.
 				</p>
+				<script src="script.js"></script>
 	</body>
 </html>
