@@ -63,8 +63,7 @@ body{
 }
 
 .menu-toggle{
-	display:none;
-	/*  */	
+	display:none;	
 }
 .menu-toggle:hover{
 	background:rgb(230,230,230);
@@ -248,8 +247,9 @@ body{
 }
 
 .btn{
-	display:block;
+	display:flex;
 	width:fit-content;
+	align-items:center;
 	margin:20px auto;
 	margin-top:50px;
 	background:blue;
@@ -270,59 +270,315 @@ body{
 	color:yellow;
 	text-decoration:upper-latin;
 }
+.fleche{
+	font-size:2rem;
+	color:white;
+}
+/* fin page Accueil */
+
+/*page apropos */
+.apropos{
+	background:#fff;
+}
+.apropos1{
+	width:100%;
+	max-width:700px;
+	margin:100px auto;
+	padding:20px;	
+}
+.apropos h1{
+	text-align:center;
+}
+.apropos h2{
+	text-align:center;
+	margin-top:50px;
+}
+.apropos2{
+	width:100%;
+	max-width:1200px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	margin:100px auto;
+}
+.apropos2 p{
+	gap:20px;
+	width:350px;
+	border:1px solid rgb(240,240,240);
+	padding:20px;
+	border-radius:10px;
+	box-shadow:8px 4px rgba(0,0,0,0.07);
+}
+
+@media(max-width:768px){
+	.apropos{
+		justify-content:center;
+		align-items:center;
+	}
+	.apropos1{
+		align-items:center;
+	}
+	.apropos2 p{
+		align-items:center;
+		justify-content:center;
+		width:90%;
+		margin:10px auto;
+	}
+	
+}
+/* Fin Page aprpoos */
+
+/*page services */
+
+.serv{
+	width:100%;
+	max-width:400px;
+	margin:100px auto;
+	
+}
+
+.serv h1{
+	text-align:center;
+}
+.serv p{
+	text-align:center;
+}
+.serv a{
+	text-decoration:none;
+}
+.services{
+	background: rgb(250,250,250);
+	margin-top:200px;
+	border-radius:20px;
+	margin:auto;
+    padding:20px;
+	align-items:center;
+	
+}
+
+.titre{
+	margin:auto;
+	width:100%;
+	max-width:500px;
+}
+
+.service1 p{
+	width:50%;
+	gap:20px;
+	border:1px solid rgb(230,230,230);
+	padding:20px;
+	border-radius:8px;
+	margin:30px auto;
+	
+}
+
+.service0 h1{
+	text-align:center;
+	font-size:1.4rem;
+}
+
+.service0 p{
+	
+	width:90%;
+	border:1px solid white;
+	gap:20px;
+	padding:10px;
+	border-radius:10px;
+	margin:20px auto;
+}
+ @media(max-width:768px){
+	 .services{
+		 text-align:left;
+	 }
+	 .service0 h1{
+		 font-size:2.3rem;
+	 }
+	 .service1 p{
+		align-items:center;
+		width:90%;
+		font-size:20px;		 
+	 }
+	 .service0 p{
+		 font-size:20px;
+	 }
+	 .serv{
+		 align-items:center;
+		 width:90%;
+	 }
+	 .serv a, p{
+		 color:black;
+		 font-size:20px;
+	 }
+	 .serv h1{
+		font-size:2.5rem; 
+	 }
+ } 
+/* fin page services */
+
+/*  page contact */
+.kontak{
+	
+	margin:150px auto;
+	max-width:1200px;
+	
+}
+
+.kontakte{
+	border:1px solid rgb(230,230,230);
+	padding:20px;
+	margin:100px auto;
+	text-align:left;
+	width:100%;
+	max-width:700px;
+	border-radius:10px;
+	
+}
+.kontakte h1, h2{
+	text-align:center;
+}
+
+@media(max-width:768px){
+	.kontak{
+		justify-content:center;
+		align-items:center;
+	}
+	.kontakte{
+		justify-content:center;
+		align-items:center;
+		width:95%;
+	}
+}
+
+/* fin page contact */
+
+
+/* Page Cours */
+.cours{
+	background:#f4f4f4;
+	width:100%;
+	max-width:1200px;
+	margin: 300px auto;
+	text-align: left;
+	padding:20px;
+	border-radius:10px;	
+}
+.telecharger h1{
+	text-align:center;
+	padding:20px;
+}
+
+.division ul{
+	list-style-type:none;
+}
+.division a{
+	text-decoration:none;
+	font-size:1.2rem;
+	transition:0.6s;
+}
+
+.division a:hover{
+	background:blue;
+	color:white;
+	cursor:pointer;
+	padding:10px;
+	transform:scale(0.7);
+	box-shadow:2px 4px rgba(0,0,0,0.1);
+}
+.telechargement{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.division{
+	width:45%;
+	border:1px solid white;
+	padding:20px;
+	border-radius:10px;
+}
+.division h2{
+	text-align:center;
+	margin-bottom:20px;
+}
+
+@media(max-width:768px){
+	.cours{
+		justify-content:center;
+		align-items:center;
+		text-align:center;
+	}
+	.telechargement{
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		gap:20px;
+	}
+	.division{
+		width:60%;
+	}
+	.telecharger h1{
+		font-size:1.7rem;
+	}
+}
+/* Fin page Cours */
+
 
 /* page Apprendre */
-
-.program{
-	width:500px;
+.app{
+	width:100%;
+	max-width:1200px;
 	margin:auto;
+	margin-top:150px;
+	display:flex;
+	gap:50px;
+	margin-bottom:100px;
+}
+.apprendre{
+	margin:auto;
+	border:1px solid rgb(230,230,230);
+	border-radius:10px;
+	width:30%;
+	height:auto;
+	padding:20px;
+}
+
+.imgapp img{
+	width:100px;
+	height:100px;
+	border-radius:50%;
 }
 
 
-.content {
-  background:yellow;
-  margin: auto;
-  margin-top:100px;
-}
-
-.content h1{
-	text-align:center;
-	font-size:1.8rem;
-}
-
-.module {
-  width:100%;
-  max-width:1200px;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-top: 25px;
-  border-radius: 6px;
-}
-
-.module h3 {
-  margin-bottom: 10px;
-}
 @media(max-width:768px){
-	.content{
+	.app{
 		text-align:left;
 		align-items:center;
 		justify-content:center;
-		width:500px;
-		margin:auto;
+		flex-direction:column;
 	}
-	.module{
-		text-align:left;
-		align-items:center;
+	.apprendre{
+		width:80%;
 		justify-content:center;
+		align-items:center;
+	}
+	.apprendre h1{
+		text-align:center;
+		font-size:1.6rem;
+	}
+	.imgapp img{
+		justify-content:center;
+		align-items:center;
+		
 	}
 	.btn{
 		align-items:center;
 		text-align:center;
 	}
 }
+/* Fin page Apprendre */
+
 
 /* Section footer */
-.footer{
+ .footer{
 	margin:0;
 	padding:0;
 }
@@ -336,6 +592,16 @@ body{
 	width:100%;
 	border-radius:10px;	
 }
+ .a{
+	background:blue;
+	display:block;
+	padding:20px;
+	color:blue;
+	margin:10px auto;
+	border-radius:8px;
+	text-align:center;
+	font-weight:bold;
+	}
 
 .classe img{
 	width:70px;
@@ -346,7 +612,7 @@ body{
 
 .classe a{
 	text-decoration:none;
-	color:blue;
+	color:white;
 	font-size:0.9rem;
     transition: 0.5s;	
 }
@@ -380,16 +646,20 @@ body{
  
 .module h2{
 	text-align:center;
-}
+} 
 
-.contacter{
+ .contacter{
 	background:blue;
 	width:90%;
 	gap:20px;
 	border-radius:10px;
 	padding:20px;
 	border-radius:10px;
-	margin-top:20px;	
+	margin-top:50px;	
+}
+
+.contacter p{
+	text-align:left;
 }
 
 .cont{
@@ -421,16 +691,21 @@ body{
 	border:none;
 	background:gray;
 	color:white;
+	text-align:center;
 }
 
+.form textarea{
+	width:100%;
+	border-radius:10px;
+}
 textarea::placeholder{
 	color:white;
 	font-size:1rem;
-	justify-content:center;
-	align-items:center;
+	
 }
 input::placeholder{
 	color:white;
+	text-align:center;
 }
 .form button{
 	background:blue;
@@ -462,8 +737,6 @@ input::placeholder{
 		width:100%;
 	}
 }
-
-
-
+/* Fin footer */
 
 
