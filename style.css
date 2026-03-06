@@ -289,6 +289,9 @@ body{
 .apropos h1{
 	text-align:center;
 }
+.apropos1 p{
+	text-align:left;
+}
 .apropos h2{
 	text-align:center;
 	margin-top:50px;
@@ -308,6 +311,7 @@ body{
 	padding:20px;
 	border-radius:10px;
 	box-shadow:8px 4px rgba(0,0,0,0.07);
+	text-align:left;
 }
 
 @media(max-width:768px){
@@ -318,11 +322,16 @@ body{
 	.apropos1{
 		align-items:center;
 	}
+
+	.apropos1 p{
+		text-align:left;
+	}
 	.apropos2 p{
 		align-items:center;
 		justify-content:center;
 		width:90%;
 		margin:10px auto;
+		text-align:left;
 	}
 	
 }
@@ -341,7 +350,7 @@ body{
 	text-align:center;
 }
 .serv p{
-	text-align:center;
+	text-align:left;
 }
 .serv a{
 	text-decoration:none;
@@ -660,6 +669,7 @@ body{
 
 .contacter p{
 	text-align:left;
+	color:white;
 }
 
 .cont{
@@ -674,8 +684,11 @@ body{
 
 .page h1{
 	font-size:1.5rem;
-	text-align:center;
-	
+	text-align:center;	
+}
+
+.page p{
+	color:white;
 }
 
 .form{
@@ -705,7 +718,7 @@ textarea::placeholder{
 }
 input::placeholder{
 	color:white;
-	text-align:center;
+	text-align:left;
 }
 .form button{
 	background:blue;
@@ -738,5 +751,6 @@ input::placeholder{
 	}
 }
 /* Fin footer */
+
 
 
