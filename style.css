@@ -34,6 +34,8 @@ body{
 	align-items:center;
 	gap:5px;
 	animation:fade 1.5s;
+	color:blue;
+	font-weight:bold;
 }
 
 @keyframes fade{
@@ -146,22 +148,14 @@ body{
 		transform:translateX(0px);
 }}
 /* Accueil */
-.carte{
-	background:white;
-	width:80%;
-	max-width:600px;
-	margin:auto;
-	border-radius:20px;	
-	text-align:center;
-	margin-bottom:0px;
-}
-
-.carte img{
+.main{
+	background-image:url(image.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
 	width:100%;
-	max-width:300px;
-	height:auto;
-	border-radius:20px;
-	margin-top:20px;
+	height:100vh;
+	position:relative;	
 }
 	
 .section{
@@ -172,22 +166,8 @@ body{
 	padding:20px;
 }
 .section p{
-	text-align:left;
-}
-
-.carte h1{
-	
 	text-align:center;
-	color:red;
-	font-size:3rem;
-	margin-top:20px;	
-}
-
-.section h2{
-	text-align:center;
-	margin-top:50px;
-	font-size:1.6rem;
-	font-weight:bold;
+	color:white;
 }
 
 .figures {
@@ -195,6 +175,7 @@ body{
 	gap: 10px;
 	justify-content: center;
 	margin:50px auto;
+	margin-bottom:0px;
 }
 
 .figure {
@@ -241,32 +222,32 @@ body{
 	transition:opacity:0.6s ease,transform 0.6s ease;
 }
 
-.intro-btn.show{
+.intro-bouton.show{
 	opacity:1;
 	transform:scale(1);
 }
 
-.btn{
+.bouton{
 	display:flex;
 	width:fit-content;
 	align-items:center;
 	margin:20px auto;
-	margin-top:50px;
+	margin-top:350px;
 	background:blue;
-	padding:20px;
+	padding:12px;
 	border-radius:10px;
 	}
 
-.btn:hover{
+.bouton:hover{
 	transform:scale(1.1);
 	
 }
-.btn a{
+.bouton a{
 	color:white;
 	text-decoration:none;
 	font-weight:800;
 }
-.btn a:hover{
+.bouton a:hover{
 	color:yellow;
 	text-decoration:upper-latin;
 }
@@ -588,7 +569,7 @@ body{
 
 /* Section footer */
  .footer{
-	margin:0;
+	margin:30px;
 	padding:0;
 }
 
@@ -751,6 +732,7 @@ input::placeholder{
 	}
 }
 /* Fin footer */
+
 
 
 
