@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 	<html lang="fr">
 		<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJEETPETQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJEETPETQX');
+</script>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Apprende</title>
+			<title>Apprendre</title>
 			<link rel="stylesheet" href="style.css">
 		</head>
 		<body>
@@ -55,14 +64,21 @@
 							et autodidactes dans l’apprentissage progressif
 							des compétences numériques.
 						</p>
-						<a class="lien" href="section_html//menu.html" >
+						<ol>
+						<li style="text-align:center;padding:0 20px 20px 20px;">
+						<button id="openBientot" class="bouton" >
 							Commencer votre apprentissage en progammation web
-						</a> 
-				
+						</button>
+						</li>
+						</ol>
+						<div id="contenuBientot" class="abientot">
+						<p >BIENTOT</p>
+						<p id="quitte">Quitter</p>
+						</div>
 					</div>
 				</Section>
-				
-				<Section class="division">
+				 
+				<!-- <Section class="division">
 					<div class="carte">
 						<h2>Section Quiz</h2><br>
 						<img class="image" src="image.jpg" alt="image liee a la programmation"></img>		
@@ -70,9 +86,13 @@
 							La section QUIZ vous aide à approfondir les notions
 							apprises et permet le developpemnt de l'esprit
 						</p>
-						<a class="lien" href="geometrie.html">Les Quiz</a> 
+						<ol>
+						<li style="text-align:center;padding:0 20px 20px 20px;">
+						<a class="lien" href="quiz.html">Les Quiz</a> 
+						</li>
+						</ol>
 					</div>
-				</Section>	
+				</Section>	 --> 
 			<footer class="footer">
 			
 			
@@ -80,6 +100,44 @@
 					<p 
 				   class="copy">&copy.2026 LaPageEdu | Tous droits réservés.
 		</main>		</p>
-			<script src="script.js"></script>
+			 <!-- <script src="script.js"></script>  -->
+		<script>
+		/* Message affichant Bientot */
+ let ouvrirBientot=document.getElementById("openBientot");
+ let contenuBientot=document.getElementById("contenuBientot");
+ let quitteBientot=document.getElementById("quitte");
+ 
+ ouvrirBientot.addEventListener("click", function(){
+	 contenuBientot.style.display="block";
+ })
+ quitteBientot.addEventListener("click", function(){
+	 contenuBientot.style.display="none";
+ })
+		</script>
+		<script>
+		const toggle = document.getElementById("menu-toggle");
+	const nav = document.getElementById("nav");
+
+	toggle.addEventListener("click", () => {
+	nav.classList.toggle("active");
+	});
+	</script>
+	
+	
+	/*Les lettres de LaPageEdu*/
+<script>
+	const letters = document.querySelectorAll('.figure');
+	let index = 0;
+
+	const interval = setInterval(() => {
+	if (index < letters.length) {
+		letters[index].classList.add('show');
+		index++;
+	} else {
+	clearInterval(interval);
+	}
+	}, 100); // 1 seconde = 1000 ms
+	
+	</script>
 		</body>
 	</html>
