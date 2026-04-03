@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 	<html lang="fr">
 		<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJEETPETQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJEETPETQX');
+</script>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Accueil</title>
@@ -14,12 +23,12 @@
 			<div class="publicite" id="publicite">
 				<p>
 					La direction de l'Ecole Académie Chrétienne 
-					de Colette (ACHCO) reçoit tous les jours  
-					les inscriptions pour l'Année 
+					de Colette (ACHCO) reçoit déjà 
+					les inscriptions pour l'année 
 					Académique 2026-2027
 					pour les classes suivantes:
 					<strong style="color:yellow; text-decoration:underline;">
-					Section Kidergarten :</strong> (1e à la 3e A.K.)
+					Section Kindergarten :</strong> (1e à la 3e A.K.)
 					<strong style="color:yellow; text-decoration:underline;">
 					Section Fondamentale :</strong>
 					(1e à la 6e A.F.) 
@@ -66,29 +75,33 @@
 					<div class="carte">
 						<h1>LaPage  EDU</h1>
 						<p  style="text-align:center">Apprendre Autrement avec<strong> LaPageEdu!</strong> </p>	
-					</div>		
-					<a class="lien"href="apprendre.html">Démarrez votre apprentissage</a>	
+					</div>
+					<ol>
+						<li style="text-align:center;padding:0 20px 0 20px; color:white;">
+							<a class="lien"href="apprendre.html">Démarrez votre apprentissage</a>	
+						</li>
+					</ol>
 				</section>
 				
 				<!-- <section class="division1" Jeux deviner le nombre>-->
-				<section class="division">
-					<div class="jeu" id="jeu">
-						<h3>Joueons un peu</h3>
-						<p>Clique sur le bouton pour Générer une actvité à exécuter
+				<section class="division1">
+					<div class="carte" id="jeu">
+						<h3>Jouer pour se distraire</h3>
+						<p style="text-align:center;">Clique sur le bouton pour Générer une actvité à exécuter
 						</p>
 						<p id="correspondance"></p>
-						<p id="resultat" class="resultat"></p>
-						
-						<button class="bouton" id="bouton">Générer une activité</button> 	
+						<button class="bouton" id="bouton">Générer une activité</button> <br>	
+						<button class="notice" id="notice">À propos du jeu?</button>
 					</div>
+					</section>
 					
-					<!-- Modal qui explique comment jouer le jeu -->
-					<button class="notice" id="notice">À propos du jeu?</button>
-					<div class="conteneurNotice" id="conteneurNotice">
-						<div class="contenuNotice" id="contenuNotice">
+					<section class="division1">
+							<!-- Modal qui explique comment jouer le jeu -->
+					<div class="conteneurNotice" id="conteneurNotice"> 
+						<div class=" contenuNotice " id="contenuNotice">
 							<span class="fermeture" id="fermeture">&times;</span>
-							 <h2>En quoi consiste ce jeu?</h2>
-							 <p>  
+							<h2>En quoi consiste ce jeu?</h2>
+							<p>  
 								Découvrez une façon simple et ludique de vous divertir.
 								Cliquez sur le bouton générateur pour afficher une activité à réaliser.
 								Chaque proposition est générée aléatoirement, garantissant 
@@ -101,17 +114,17 @@
 								<a href="contact.html" 
 								style="text-decoration:none; color:blue; font-size:1.2rem;">
 								 Consultez nos points de contact pour nous écrire.</a>
-							 </p> 			
+							</p> 			 
 						</div>		
 					</div>
-				</section>
-			</main>
+				</section>	
+			<!-- </main> -->
 			
 			<div class="annonces">
 				<button class="bouton" id="openAnnonces">Annonces</button>
 			</div>
 			<div class="barre" id="contenuAnnonces">
-				<span id="closeAnnonces">&times;</span>
+				<span id="closeAnnonces" class="closeAnnonces">&times;</span>
 				<button class="bouton" id="btn-1">Section Achco</button>
 				<div id="achco" class="achco">
 					<span id="closeAchco">&times;</span>
@@ -122,44 +135,62 @@
 						<hr>
 						<p>
 							La direction de l'Ecole Académie Chrétienne 
-							de Colette (ACHCO) reçoit tous les jours 
+							de Colette (ACHCO) reçoit déjà 
 							les inscriptions pour l'Année 
 							Académique 2026-2027
 							pour les classes suivantes:<br>
-							<strong style="color:yellow; text-decoration:underline;">
-							Section Kidergarten :</strong> (1e à la 3e A.K.)<br>
-							<strong style="color:yellow; text-decoration:underline;">
-							Section Fondamentale :</strong>
+							1-<strong style="color:blue; text-decoration:underline;">
+							 Section Kindergarten :</strong> (1e à la 3e A.K.)<br>
+							2-<strong style="color:blue; text-decoration:underline;">
+							 Section Fondamentale :</strong>
 							(1e à la 6e A.F.)<br>  
 							Pour plus d'informations, appelez
-							au 3913-6675/4007-6524.<b> 
-							Ou rendez-vous au local de Achco situé à 
+							au 3913-6675/4007-6524. 
+							Ou passsez au local de Achco situé à 
 							la route nationale #2, Colette, 
 							Cayes, Sud, Haiti.
 						</p>
 					</div>
 				</div>
-				<button class="bouton" id="btn-2">bouton 2</button>
+				<!-- <button class="bouton" id="btn-2">bouton 2</button>
 				<button class="bouton" id="btn-3">bouton 3</button>
 				<button class="bouton" id="btn-4">bouton 4</button>
-				<button class="bouton" id="btn-5">bouton 5</button>
+				<button class="bouton" id="btn-5">bouton 5</button> -->
 			</div>
+			
+			<!-- Le contenu de light-box -->
+			 <div id="light-box" class="light">
+				<span id="closebox" class="closebox">&times;</span>
+				<div class="agrandissement">
+					<img id="grande">
+				</div>
+			</div>
+			
+			<!-- Les Photos de Achco -->
+			<section class="division">			
+				<div  id="achcoImages" class="achoImages">
+					<h2>À Achco, le sport est l'une de nos priorités</h2>
+					<div  id="imagesAchco" class="images">
+					<img class="photoAchco" src="achco.jpeg" alt="Photo 4">
+					</div>
+				</div>
+			</section>
+			</main>
 			<footer class="footer">
 				<div class="classe"> 
 					<div class="page">  
-						<h3>A propos de LaPageEdu</h3>
-						<button class="ouvrir" id="ouvrir" >LaPageEdu?</button>
+						<h3>À propos de LaPageEdu</h3>
+						<button class="bouton" id="ouvrir" >LaPageEdu?</button>
 							
 							<!-- Modal-->
-					
+							
 						<div class="modal" id="modal">
 							<div class="contenu">
 								<span id="fermer" class="fermer">&times;</span>
 								<h2>Qui sommes-nous?</h2>
 							</div>
 							<div class="presentation">
-								
-								<img src="seminaire.jpg" alt="PhotoProfil" id="maPhoto" class="maphoto">
+								<img src="image.jpg" alt="PhotoProfil" id="maPhoto" class="maphoto"></img>
 									 <p>
 									Nous sommes <strong>LaPageEdu</strong>, Plateforme éducative, 
 									fondée par <strong>Jean Eddy Pagenel</strong>, 
@@ -172,9 +203,13 @@
 									</p> 
 								
 								<div>
+									<ol>
+									<li style="text-align:center;padding:0 20px 0 20px; color:white">
 									<a class="lien" href=" apropos.html">
 										Aprendre plus de LaPageEdu
 									</a>
+									</li>
+									</ol>
 								</div> 
 							</div>
 						</div>
@@ -207,17 +242,25 @@
 					<div class="page">
 						       <h3>Points de contact</h3>
 						       <ul>
-									<li><strong>Email:</strong>lapageedu1@gmail.com</a></li>
-									<li><strong>Adresse locale:</strong> Madame Combe, Cayes, Haiti</li>
-									<li><strong>Téléphone:</strong> (509)3814 6245 / 3570 9507</li>
+									<li><strong>Email : </strong>lapageedu1@gmail.com</a></li>
+									<li><strong>Adresse locale : </strong> Madame Combe, Cayes, Haiti</li>
+									<li><strong>Téléphone : </strong> (509)3814 6245 / 3570 9507</li>
 						       </ul>
+							   <ol>
+							   <li style="text-align:center; padding:0 20px 0 20px; color:white" >
 						       <a class="lien"href="contact.html">Quitter un message. </a>			
-					</div>	
-				</div>	
+					</div>		</ol>
+							   </li>
+				</div>
+				<!-- Cookies -->
+			<!-- <div id="cookie-banner">
+				<p>Ce site utilise des cookies pour analyser le trafic.<p/>
+				<button onclick="accepterCookies()">Fermer</button>
+			</div> -->
 			</footer>
 				<p 
 				   class="copy">&copy.2026 LaPageEdu | Tous droits réservés.
-				</p>																	<script src="script.js"></script>
+				</p>
+				<script src="script.js"></script>
 		</body>
-	</html>
-
+	</html> 
