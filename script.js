@@ -1,4 +1,5 @@
-const toggle = document.getElementById("menu-toggle");
+
+	const toggle = document.getElementById("menu-toggle");
 	const nav = document.getElementById("nav");
 
 	toggle.addEventListener("click", () => {
@@ -115,34 +116,34 @@ openbox.addEventListener("click", function(){
 	grandePhoto.src=this.src;
 })	
 
-closeb.addEventListener("click", function(e){
+	/* closeb.addEventListener("click", function(e){
 	box.style.display="none";
 	if(e.target==grandePhoto){
 		box.style.display="none";
-	}
-})	
+	} 
+})	*/
 	
-/* ACHCO */
 
 
 
-/* Cookies */
-function accepterCookies(){
-	document.getElementById("cookie-banner").style.display="none";
-} 
-
-const btn=document.getElementById("btn-1");
-const achco=document.getElementById("achco");
-const closeachco=document.getElementById("closeAchco");
-
-btn.addEventListener("click", function(){
-	achco.style.display="block";
+/* light-box photo ACHCO 
+	let openlightbox=document.getElementById("photolightBox");
+	let modalLightbox=document.getElementById("modalLightbox");
+	let closePhotoLightbox=document.getElementById("closePhoto");
+	let grandPhoto=document.getElementById("grandPhoto");
+	
+	openlightbox.addEventListener("click", function(){
+	modalLightbox.style.display="flex";
+	grandPhoto.src=this.src;
 })
-closeachco.addEventListener("click", function(){
-	achco.style.display="none";
-})
+
+closePhotoLightbox.addEventListener("click", function(){
+	modalLightbox.style.display="none";
+}) */
+
+ 
  /* Message affichant Bientot */
- let ouvrirBientot=document.getElementById("openBientot");
+ /* let ouvrirBientot=document.getElementById("openBientot");
  let contenuBientot=document.getElementById("contenuBientot");
  let quitteBientot=document.getElementById("quitte");
  
@@ -152,5 +153,42 @@ closeachco.addEventListener("click", function(){
  quitteBientot.addEventListener("click", function(){
 	 contenuBientot.style.display="none";
  })
+ */
+ /* Cookies */
+ function accepterCookies(){
+	document.getElementById("cookie-banner").style.display="none";
+}; 
 
- 
+
+/* Formulaire 
+let formContact = document.querySelector(".form");
+let confirmation = document.getElementById("messageConfirmation");
+
+if (formContact) {
+    formContact.addEventListener("submit", function() {
+        confirmation.style.display = "block";
+        
+        // Cacher le message après 5 secondes
+        setTimeout(function() {
+            confirmation.style.display = "none";
+        }, 5000);
+    });
+}*/
+
+
+// Leçon 15 - Confirmation d'envoi
+let form = document.querySelector(".form");
+let statusDiv = document.getElementById("formStatus");
+
+if (form) {
+    form.addEventListener("submit", function() {
+        statusDiv.textContent = "Envoi en cours...";
+        statusDiv.style.color = "blue";
+        
+        // Le message disparaît après l'envoi
+        setTimeout(function() {
+            statusDiv.textContent = "Message envoyé ! Nous vous répondrons sous 48h.";
+            statusDiv.style.color = "green";
+        }, 2000);
+    });
+}
