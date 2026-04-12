@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+	<html lang="fr">
+		<head>
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJEETPETQX"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-WJEETPETQX');
+			</script>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Accueil</title>
+			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+		</head>
+			<!-- Le corps -->
+		<body>
+			<header>
+			
+				<div id="menuAchco" class="menu_Achco">
+					<div class="contenuSpan">
+						<span class="spanAchco"></span>
+						<span class="spanAchco"></span>
+						<span class="spanAchco"></span>
+						<p>ACHCO</p>
+					</div>	
+				</div>
+					<!-- Modal du menu -->
+				<div class="liensAchco" id="liens_Achco">
+					<div id="contenuLiens" class="contenu-Liens">
+						<ul>
+							<li>
+								<a href="index.html">Accueil</a>
+							</li>
+							<li>
+								<a href="#">Section Kindergarten</a>
+							</li>
+							<li>
+								<a href="#">Section Fondamentale</a>
+							<li>
+								<a href="#">Eleves</a>
+							</li>
+							<li>
+								<a href="#">Parents</a>
+							</li>
+							</li>
+						</ul>
+					</div>
+				</div>
+				</div>
+			</header>
+			<!-- <main class="sectionAchco">
+				<section class="division1"> -->
+			<main class="conteneur" id="conteneur"> 	
+				<section class="division">
+					<div>
+						<div id="contenuAchco" class="contenuAchco">
+							<h2>Avis au grand public de Colette 
+								et des zones avoisinantes
+							</h2>
+							<hr>
+							<p>
+								La direction de l'Ecole Académie Chrétienne 
+								de Colette (ACHCO) reçoit déjà 
+								les inscriptions pour l'Année 
+								Académique 2026-2027
+								pour les classes suivantes:<br>
+								1-<strong style="color:blue; text-decoration:underline;">
+								Section Kindergarten :</strong> (1e à la 3e A.K.)<br>
+								2-<strong style="color:blue; text-decoration:underline;">
+								Section Fondamentale :</strong>
+								(1e à la 6e A.F.)<br>  
+								Pour plus d'informations, appelez
+								au 3913-6675/4007-6524. 
+								Ou passsez au local de Achco situé à 
+								la route nationale #2, Colette, 
+								Cayes, Sud, Haiti.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="division">
+					<!-- Le contenu de light-box -->
+					<div id="light-box" class="light">
+						<span id="closebox" class="closebox">&times;</span>
+						<div class="agrandissement">
+							<img id="grande">
+						</div>
+					</div>
+			
+						<!-- Les Photos de Achco -->
+					<div  id="achcoImages" class="achoImages">
+						<h2>À Achco, le sport est l'une de nos priorités</h2>
+						<div  id="imagesAchco" class="images">
+							<img id="photolightBox" class="photoAchco" src="achco.jpeg" alt="Photo 4">
+						</div>
+							<!-- light-box pour la photo -->
+						<div id="modalLightbox">
+							<div id="contenuLightBox" class="lightBox">
+								<span id="closePhoto">&times;</span>
+								<div class="agrandir">
+									<img id="grandPhoto">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+				<!-- <script src="script.js"></script> -->
+			<script>
+				/* Menu de la page Achco */
+				const openLiensAchco=document.getElementById("menuAchco");
+				const liensachco=document.getElementById("liens_Achco");
+				
+				openLiensAchco.addEventListener("click", function(){
+				liensachco.style.display="block";
+				
+				})
+				
+				liensachco.addEventListener("click", function(){
+				liensachco.style.display="none";
+				})	
+			</script>
+			
+			<script>
+					let openlightbox=document.getElementById("photolightBox");
+					let modalLightbox=document.getElementById("modalLightbox");
+					let closePhotoLightbox=document.getElementById("closePhoto");
+					let grandPhoto=document.getElementById("grandPhoto");
+	
+						openlightbox.addEventListener("click", function(){
+						modalLightbox.style.display="flex";
+						grandPhoto.src=this.src;
+					})
+						closePhotoLightbox.addEventListener("click", function(){
+						modalLightbox.style.display="none";
+					})
+			</script>
+			<!-- <script src="script.js"></script> -->
+		</body>
+	</html>
+		
