@@ -1120,6 +1120,129 @@ input::placeholder{
 	color:blue;
 }
 
+* Section Quiz */
+.content{
+	 max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+
+#questions{
+	 font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#reponses button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1.2rem;
+	font-weight:bold;
+    border: none;
+    border-radius: 8px;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reponses button:hover {
+    background: #0056b3;
+    transform: scale(1.03);
+	
+}
+.vrai {
+    background: #28a745 !important;
+}
+
+/* Mauvaise réponse */
+.faux {
+    background: #dc3545 !important;
+}
+
+/* Boutons désactivés */
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Message */
+#messages {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#suivant {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#suivant:hover {
+    background: #000;
+}	
+
+/* Bouton Rejouer */
+#rejouer {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	display:none;
+}
+
+#rejouer:hover {
+    background: darkgreen;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+    #conteneur {
+        width: 95%;
+        margin: 60px auto;
+        padding: 15px;
+    }
+
+    #questions {
+        font-size: 1.2rem;
+    }
+
+    #reponses button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    #suivant,
+    #rejouer {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #messages {
+        font-size: 1rem;
+    }
+}	
+ 
  
 
 
