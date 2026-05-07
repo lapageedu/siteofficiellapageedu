@@ -215,7 +215,7 @@ if (form) {
  },
  
  {
-	 question:"4- Où a lieu la dernière bataille conduisant à l'indépendance d'Haïti?",
+	 question:"4- Où a eu lieu la dernière bataille conduisant à l'indépendance d'Haïti?",
 	 reponses:["Vertière(Cap-haitien)","Delmas(Port-au-Prince)","Castel Père,(Cayes)"],
 	 correct:0
  },
@@ -226,7 +226,7 @@ if (form) {
 	 correct:1
  },
   {
-	 question:"6- Qui a ecrit l'acte de l'indépedance d'Haïti?",
+	 question:"6- Qui a écrit l'acte de l'indépedance d'Haïti?",
 	 reponses:["Bois-Rond Tonerre","Pétion","Lamarre"],
 	 correct:0
  },
@@ -237,7 +237,7 @@ if (form) {
  },
  
  {
-	 question:"8- En combien de département Haïti est-elle divisée?",
+	 question:"8- En combien de départements Haïti est-elle divisée?",
 	 reponses:["11","10","8"],
 	 correct:1
  },
