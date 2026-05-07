@@ -24,7 +24,7 @@
 
  // Jeu deviner le nombre 
 // on sélectionne le bouton
-  let bouton = document.getElementById("bouton"); 
+ let bouton = document.getElementById("bouton"); 
 
  // on sélectionne la zone résultat
 let resultat = document.getElementById("resultat");
@@ -47,7 +47,6 @@ let actions = [
  "Marcher comme un robot",
  "Rire comme un fou",
  "Prononcer la phrase suivante: Sur dix-huit huitres huit huitres frites s'enfuient sans bruit",
-
 ];	 
 
 	bouton.addEventListener("click", function(){ 
@@ -111,8 +110,8 @@ let closeb=document.getElementById("closebox");
 let box=document.getElementById("light-box");	
 let grandePhoto=document.getElementById("grande");
 
-openbox.addEventListener("click", function(){
-	box.style.display="flex";
+	openbox.addEventListener("click", function(){
+	openbox.style.display="flex";
 	grandePhoto.src=this.src;
 })	
 
@@ -192,3 +191,158 @@ if (form) {
         }, 2000);
     });
 }
+
+//Quiz pqrtie 1
+	
+		let boite=[
+ {
+	 question:"1- Comment s'appelle la première république noire indépendante?",
+	 reponses:["Haïti","Congo","Mali"],
+	 correct:0
+ },
+ 
+ {
+	 question:"2- En quelle année Haïti a-t-elle proclamé son indépendance?",
+	 reponses:["1801","1804","1806"],
+	 correct:1
+ },
+ 
+ 
+ {
+	 question:"3- Quand a eu lieu la dernière bataille menant à la proclamation de l'indépendance d'Haïti?",
+	 reponses:["1806","1804","1803"],
+	 correct:2
+ },
+ 
+ {
+	 question:"4- Où a lieu la dernière bataille conduisant à l'indépendance d'Haïti?",
+	 reponses:["Vertière(Cap-haitien)","Delmas(Port-au-Prince)","Castel Père,(Cayes)"],
+	 correct:0
+ },
+ 
+  {
+	 question:"5- Qui a cousu le drapeau haitien?",
+	 reponses:["Sanite Bélair","Catrine Flon","Lamartinière"],
+	 correct:1
+ },
+  {
+	 question:"6- Qui a ecrit l'acte de l'indépedance d'Haïti?",
+	 reponses:["Bois-Rond Tonerre","Pétion","Lamarre"],
+	 correct:0
+ },
+  {
+	 question:"7- En quel département se trouve la Citadele Laferrière?",
+	 reponses:["Grand'Anse","Sud","Nord"],
+	 correct:2
+ },
+ 
+ {
+	 question:"8- En combien de département Haïti est-elle divisée?",
+	 reponses:["11","10","8"],
+	 correct:1
+ },
+ 
+ {
+	 question:"9- Quelle est la plus petite division administrative d'Haïti?",
+	 reponses:["La Commune","Le Département","La Section communale"],
+	 correct:2
+ },
+ 
+ {
+	 question:"10- En Haïti, on fête le drapeau le?",
+	 reponses:["18 janvier","18 mai","18 novembre"],
+	 correct:1
+ },
+ 
+ ];
+ 
+// let index=0;
+ let score=0;
+ let tepms=10;
+ //let interval;
+ let reponseDonnee=false;
+ 
+ //dom
+ //let timerElement = document.getElementById("timer");
+ let question1=document.getElementById("questions");
+ let reponse1=document.getElementById("reponses");
+ let message1=document.getElementById("messages");
+ let boutonSuivant=document.getElementById("suivant");
+ let boutonRejouer=document.getElementById("rejouer");
+ 
+ function affichage(){
+	 /* clearInterval(interval);
+	 demarrerTimer()  */
+	 let q=boite[index];
+	 question1.textContent=q.question;
+	 reponse1.innerHTML="";
+	 message1.textContent="";
+	 
+	 q.reponses.forEach((rep,i)=>{
+		 let boutons=document.createElement("button");
+		 boutons.textContent=rep;
+		 boutons.addEventListener("click",()=>verification(i,boutons));
+		 reponse1.appendChild(boutons);
+		
+		
+	 });
+	
+ }
+ 
+ 
+ //verification
+ function verification(indexReponse,boutonCliquee){
+	 //clearInterval(interval);
+	 let q=boite[index];
+	 let bonneReponse=q.correct;
+	 let boutons=reponse1.querySelectorAll("button");
+	 boutons.forEach(btn=>btn.disabled=true);
+	 
+	 if(indexReponse===bonneReponse){
+		score++;
+		boutonCliquee.classList.add("vrai");
+		message1.textContent="Bravo, bonne réponse ✅!";
+		
+	 }
+	 else{
+		 
+		 boutonCliquee.classList.add("faux");
+		 message1.textContent="désolé, mauvaise réponse ❌!";
+	 }
+	 
+ }
+ 
+ //question suivante;
+	 boutonSuivant.addEventListener("click",()=>{
+	 index++;
+	 q=boite;
+	 
+	 if(index<q.length){
+		 affichage();
+	 }
+	 else{
+		  finQuiz(); 
+		  boutonRejouer.style.display="block";
+	 }
+	 
+ });
+ 
+ function finQuiz(){
+	 reponse1.innerHTML="";
+	 question1.textContent="Merci de jouer!";
+	 message1.textContent=`score:${score}/${q.length}`;
+	 boutonSuivant.style.display="none";
+	 boutonRejouer.display="block";
+ }
+ 
+	boutonRejouer.addEventListener("click",()=>{
+	index=0;
+	score=0;
+	boutonSuivant.style.display="block";
+	boutonRejouer.style.display="none";
+ 
+	affichage(); 
+ 
+ });
+  affichage(); 
+ 
