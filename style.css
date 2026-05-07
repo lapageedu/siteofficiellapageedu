@@ -1130,7 +1130,10 @@ input::placeholder{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
-
+.content h1{
+	Color:blue;
+	font-weight:bold;
+}
 
 #questions{
 	 font-size: 1.4rem;
