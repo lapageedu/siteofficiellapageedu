@@ -1215,7 +1215,12 @@ button:disabled {
 #rejouer:hover {
     background: darkgreen;
 }
-
+#votreMessage{
+	display:none;
+}
+#rejouer:hover {
+    background: darkgreen;
+}
 /* 📱 Mobile */
 @media (max-width: 768px) {
 
