@@ -197,7 +197,7 @@ if (form) {
 		let boite=[
  {
 	 question:"1- Comment s'appelle la première république noire indépendante?",
-	 reponses:["Haïti","Sénégal","Mali"],
+	 reponses:["Sénégal","Haïti","Mali"],
 	 correct:0
  },
  
