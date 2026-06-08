@@ -13,7 +13,8 @@
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Accueil</title>
-			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="achco.css">
+			<link rel="stylesheet" href="C:\Users\HP CLASSMATE\Desktop\Mon Nouveau site/style.css"> 
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		</head>
 			<!-- Le corps -->
@@ -108,38 +109,35 @@
 						</div>
 					</div>
 				</section>
+				
+				<!-- Galerie achco -->
+				<section class="division">
+					<h1>Ma Galerie Photos</h1>
+					<div class="gallery">
+						<img src="achco0.jpg" alt="image">
+						<img src="achco1.jpg" alt="image">
+						<img src="achco2.jpg" alt="image">
+						<img src="achco3.jpg" alt="image">
+						<img src="achco4.jpg" alt="image">
+						<img src="achco5.jpg" alt="image">
+					</div>
+
+					<!-- LIGHTBOX -->
+
+					<div class="lightbox" id="lightbox">
+						<span class="close">&times;</span>
+						<span class="prev">&#10094;</span>
+
+						<img id="lightbox-img" src="" alt="">
+
+						<span class="next">&#10095;</span>
+					</div>
+				</section>
 			</main>
 				<!-- <script src="script.js"></script> -->
-			<script>
-				/* Menu de la page Achco */
-				const openLiensAchco=document.getElementById("menuAchco");
-				const liensachco=document.getElementById("liens_Achco");
-				
-				openLiensAchco.addEventListener("click", function(){
-				liensachco.style.display="block";
-				
-				})
-				
-				liensachco.addEventListener("click", function(){
-				liensachco.style.display="none";
-				})	
-			</script>
 			
-			<script>
-					let openlightbox=document.getElementById("photolightBox");
-					let modalLightbox=document.getElementById("modalLightbox");
-					let closePhotoLightbox=document.getElementById("closePhoto");
-					let grandPhoto=document.getElementById("grandPhoto");
-	
-						openlightbox.addEventListener("click", function(){
-						modalLightbox.style.display="flex";
-						grandPhoto.src=this.src;
-					})
-						closePhotoLightbox.addEventListener("click", function(){
-						modalLightbox.style.display="none";
-					})
-			</script>
-			<!-- <script src="script.js"></script> -->
+			
+			 <script src="achco.js"></script> 
 		</body>
 	</html>
 		
