@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+	<html lang="fr">
+		<head>
+			 Google tag (gtag.js) 
+			<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-WJEETPETQX');
+			</script>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Quiz</title>
+			<link rel="stylesheet" href="ialtech.css">
+			<!--link rel="stylesheet" href="style.css"> -->
+		</head>
+		
+		<body>
+			<div class="vide"></div>
+			<div class="publicite" id="publicite">
+				<p>
+					Contactez l'équipe administrative de LaPageEdu pour la publicité de 
+					vos produits au 3814 6245/3570 9507 ou écrivez nous par whatapp sur 3814 6245. 
+					(email:lapageedu1@gmail.com).
+				</p>
+			</div>
+			<header class="header">
+				<div class="logo">
+					<img src="C:\Users\HP CLASSMATE\Desktop\Mon Nouveau site/image.jpg" alt="la photo"> <br>
+					<span><strong>LaPageEdu,</strong><br> 
+						Plateforme d'apprentissage <br>dédiée 
+						à l’éducation numérique.
+					</span>
+				</div>
+				<div class="eddy" id="idEddy"></div>
+				<div class="menu-toggle" id="menuToggle">
+						<span class="span"></span>
+						<span class="span"></span>
+						<span class="span"></span>	
+				</div>
+				<nav class="nav" id="nav">
+					<a href="C:\Users\HP CLASSMATE\Desktop\Mon Nouveau site/index.html">Accueil</a>
+					<a href="cours.html">Cours</a>							
+				</nav>
+			</header>
+				
+				
+				<!-- <div id="modalEvaluation" class="Modal_Evaluation"> -->
+						<div class="ialtech">
+						<h1> CEFOBA, Cours de Bible</h1>
+						<p>Quiz de doctrine</p>
+						</div>		
+			<div class="contenuQuiz" id="modalEvaluation">
+				<h2>✅ Cochez la case qui correspond à la bonne réponse</h2>			
+				<form id="quizForm">
+				<div class="question">
+					<h3>1. L'Enseigement centré sur Jésus-Christ est 
+					</h3>
+					<label><input type="radio" name="q1" value="0"> La Sotériologie</label>
+					<label><input type="radio" name="q1" value="1"> La Pneumatologie</label>
+					<label><input type="radio" name="q1" value="2"> La Christologie</label>
+				</div>
+				<div class="question">
+					<h3>2.  (2 Timothée 3:16): "Toute écriture est inspirée de Dieu...". Ce texte parle de:</h3>
+					<label><input type="radio" name="q2" value="0"> Canaon</label>
+					<label><input type="radio" name="q2" value="1"> inspiration</label>
+					<label><input type="radio" name="q2" value="2"> les deux</label>
+				</div>
+				<div class="question">
+					<h3>3. Les 66 livres (39 AT, 27 NT) reconnus comme parole de Dieu est . </h3>
+					<label><input type="radio" name="q3" value="0"> Le Canon<label>
+					<label><input type="radio" name="q3" value="1"> L'Autorité</label>
+					<label><input type="radio" name="q3" value="2"> aucune</label>
+				</div>
+				<div class="question">
+					<h3>4. Dieu gouverne toutes choses selon sa volonté (Éphésiens 1:11).</h3>
+					<label><input type="radio" name="q4" value="0"> Souveraineté </label>
+					<label><input type="radio" name="q4" value="1"> Unicité</label>
+					<label><input type="radio" name="q4" value="2"> Trinité</label>
+				</div>
+				<div class="question">
+					<h3>5. La doctrine du Saint-Esprit </h3>
+					<label><input type="radio" name="q5" value="0"> Pneumatologie </label>
+					<label><input type="radio" name="q5" value="1"> La divinite</label>
+					<label><input type="radio" name="q5" value="2"> L'hamartiologie</label>
+				</div>
+				
+				<div class="question">
+					<input type="text" id="nom" placeholder="Votre nom" required>
+
+					<button type="submit" id="soumission" >Envoyer</button>
+					</div>
+				</form>
+
+				<p id="resultat"></p>
+			</div>
+			
+			<footer>				
+
+				<p class="footer">
+				&copy.2026 LaPageEdu | Tous droits réservés.
+				</p>
+			</footer>
+			
+				 <!--  <script src="script.js"></script>  --> 
+			 <!-- <script src="cours.js"></script> 
+				<script src="evaluation.js"></script -->
+	</body>
+</html>
+
+<script>
+	const toggle = document.getElementById("menuToggle");
+	const nav = document.getElementById("nav");
+	
+	
+	toggle.addEventListener("click", () => {
+	nav.classList.toggle("active");
+	
+	});
+	</script>
+	<script>
+	const { createClient } = supabase;
+	const supabaseUrl = "https://meyefwzionqfkqjabzxc.supabase.co";
+	const supabaseKey = "sb_publishable_VS4Ql15k0SGAp41RWJdKFg_fnM-SVaZ";
+	const supabaseClient = window.supabase.createClient(
+    supabaseUrl,
+    supabaseKey
+);
+console.log("Supabase chargé :", supabaseClient);
+</script>
+	<script>
+	async function enregistrerScore(nom, score){
+
+    const { data, error } = await supabaseClient
+        .from('etudiants')
+        .insert([
+            {
+                nom: nom,
+                score: score
+            }
+        ]);
+		 console.log("DATA :", data);
+         console.log("ERROR :", error);
+
+    if(error){
+        console.error(error);
+    }else{
+        console.log("Score enregistré");
+    }
+}
+	</script>
+  <script>
+		const form = document.getElementById("quizForm");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+  console.log("formulaire soumis");
+
+  let score = 0;
+
+  const bonnesReponses = ["2", "1", "0", "0", "0"];
+
+  bonnesReponses.forEach((rep, index) => {
+
+    const choix = document.querySelector(
+      `input[name="q${index + 1}"]:checked`
+    );
+
+    if (choix && choix.value === rep) {
+      score++;
+    }
+  });
+
+  <!-- const nom = document.getElementById("nom").value;
+//	console.log(window.supabase);
+	//console.log(supabase);
+ // await enregistrerScore(nom, score); -->
+
+  alert(`Votre score est ${score}/5`);
+form.reset();
+});
+  </script>
